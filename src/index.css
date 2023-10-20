@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    /* the main color for a background */
+    --color-main-fill: #f1f5f9;
+    --color-sidebar-fill: #e2e8f0;
+    --color-text-base: #0f1729;
+  }
+
+  .theme-dark {
+  }
+
+  .avatar-span > svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}

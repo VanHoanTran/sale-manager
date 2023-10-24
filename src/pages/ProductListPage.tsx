@@ -1,5 +1,7 @@
+import ProductList from '../components/ProductList/';
+
 const ProductListPage = () => {
-  return <div>Product List Page</div>;
+  return <ProductList />;
 };
 
 export default ProductListPage;

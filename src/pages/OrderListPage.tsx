@@ -1,5 +1,7 @@
+import OrderList from '../components/OrderList';
+
 const OrderListPage = () => {
-  return <div>Order List Page</div>;
+  return <OrderList />;
 };
 
 export default OrderListPage;

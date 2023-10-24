@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import IconButton from '../Buttons/IconButton';
 import {
   Bars3BottomLeftIcon,
   Bars3Icon,
@@ -9,6 +8,7 @@ import {
   SunIcon,
 } from '@heroicons/react/24/outline';
 import AccountButton from '../AccountButton';
+import IconButton from '../common/Buttons/IconButton';
 
 const NavBar = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
@@ -16,7 +16,7 @@ const NavBar = () => {
     setIsOpenMenu(open => !open);
   }
   return (
-    <nav className="h-16 pl-1 md:pl-3 w-full font-semibold  border-b border-slate-300 flex justify-between items-center">
+    <nav className="sticky top-0 bg-slate-50 h-16 flex-shrink-0 pl-1 md:pl-3 w-full font-semibold  border-b border-slate-300 flex justify-between items-center">
       <IconButton
         onClick={menuHandler}
         icon={isOpenMenu ? <Bars3BottomLeftIcon /> : <Bars3Icon />}

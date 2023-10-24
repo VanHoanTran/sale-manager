@@ -28,7 +28,7 @@ const NavBarLinks = () => {
     <nav className="min-w-[258px] pt-4 px-2">
       <ul>
         {sections.map(section => (
-          <li>
+          <li key={section.title}>
             <NavLink
               className={({ isActive }) =>
                 [

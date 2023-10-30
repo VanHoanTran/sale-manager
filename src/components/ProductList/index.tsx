@@ -1,6 +1,6 @@
 import { SortProvider } from '../../contexts/SortContext';
 import { products } from '../../data/products';
-import Table from '../common/Table';
+import { Table } from '../common/Table';
 import TableRow from '../common/Table/TableBodyRow';
 import ProductCategory from './ProductCategory';
 import ProductName from './ProductName';
@@ -9,6 +9,8 @@ import ProductQuantity from './ProductQuantity';
 import ProductStatus from './ProductStatus';
 import Title from '../common/Title';
 import { Product } from '../../constants/Props';
+import Pagination from '../common/Pagination';
+
 const titles = [
   { title: 'name', keySort: 'name' },
   { title: 'category', keySort: 'category' },
@@ -23,10 +25,9 @@ const ProductList = () => {
     <SortProvider>
       <Title>Products</Title>
 
-      <Table>
-        <Table.Header titles={titles} />
+      <Table data={products as []} titles={titles as []}>
+        <Table.Header />
         <Table.Body
-          data={products}
           render={(product: Product) => (
             <TableRow>
               <ProductName product={product} />
@@ -34,10 +35,13 @@ const ProductList = () => {
               <ProductQuantity product={product} />
               <ProductStatus product={product} />
               <ProductPrice product={product} />
-              <td></td>
+              <td>...</td>
             </TableRow>
           )}
         />
+        <Table.Footer>
+          <Pagination />
+        </Table.Footer>
       </Table>
     </SortProvider>
   );

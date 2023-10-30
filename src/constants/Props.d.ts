@@ -3,6 +3,13 @@ import { ReactNode } from 'react';
 export interface Props {
   children: ReactNode;
 }
+
+interface ButtonProps extends Props {
+  disable?: boolean;
+  active?: boolean;
+  onClick: () => void;
+}
+
 export interface IconButtonProps {
   icon: ReactNode;
   onClick: () => void;
@@ -11,9 +18,6 @@ export interface IconButtonProps {
 interface Title {
   title: string;
   keySort: string;
-}
-export interface HeaderTableProps {
-  titles: Title[];
 }
 
 export interface SortContextProps {
@@ -32,7 +36,6 @@ export interface Product {
 }
 
 export interface TableBodyProps {
-  data: object[];
   render: (item) => ReactNode;
 }
 
@@ -49,4 +52,20 @@ export interface Transaction {
   paymentMethod: string;
   paymentIdentifier: string;
   totalAmount: number;
+}
+
+export interface PaginationProps {
+  siblingPage?: number;
+  boundaryPage?: number;
+}
+
+interface TableContextProps {
+  data: [];
+  titles: [];
+  numOfColumns: number;
+  totalPage: number;
+  currentPage: number;
+  rowsPerPage: number;
+  setCurrentPage?: (value: React.SetStateAction<number>) => void;
+  setRowsPerPage?: (value: React.SetStateAction<number>) => void;
 }

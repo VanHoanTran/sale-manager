@@ -1,9 +1,9 @@
 import { Transaction } from '../../constants/Props';
 
-const OrderCustomer = ({ trans }: { trans: Transaction }) => {
+const OrderCustomer = ({ customer }: { customer: Transaction['customer'] }) => {
   return (
     <td>
-      <span className="px-2 font-light">{trans.customer}</span>
+      <span className="px-2 font-light">{customer}</span>
     </td>
   );
 };

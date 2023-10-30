@@ -4,7 +4,8 @@ import SortIconButton from '../Buttons/SortIconButton';
 
 const TableHeaderCell = ({ title, keySort }: TableHeaderProps) => {
   const { sortField, sortType, setSortValue } = useSortContext();
-  const isActive = sortField.toLocaleLowerCase() === title.toLocaleLowerCase();
+  const isActive =
+    sortField.toLocaleLowerCase() === keySort.toLocaleLowerCase();
 
   const handleSort = () => {
     // bypassing typeScript checking error, function will always exist

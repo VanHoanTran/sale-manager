@@ -1,12 +1,25 @@
-import { IconButtonProps } from '../../../constants/Props';
+import { MouseEvent, ReactNode } from 'react';
+import SvgWrapper from '../SvgWrapper';
 
-const IconButton = ({ onClick, icon }: IconButtonProps) => {
+type IconButtonProps = {
+  icon: ReactNode;
+  onClick: (e: MouseEvent) => void | (() => void);
+  padding?: boolean;
+};
+const IconButton = ({ onClick, icon, padding = true }: IconButtonProps) => {
   return (
     <button
-      className=" hover:bg-slate-100 rounded-full p-2 mx-1 transition-all ease-in duration-400 "
+      type="button"
+      className={`duration-400 mx-1 rounded-full  p-2 transition-all ease-in  ${
+        padding
+          ? 'p-2 hover:bg-slate-200'
+          : 'text-slate-50 hover:text-slate-300'
+      } `}
       onClick={onClick}
     >
-      <span className="avatar-span">{icon}</span>
+      <span>
+        <SvgWrapper>{icon}</SvgWrapper>
+      </span>
     </button>
   );
 };

@@ -4,20 +4,27 @@ import {
   ChevronUpIcon,
 } from '@heroicons/react/20/solid';
 import { useSortContext } from '../../../contexts/SortContext';
+import SvgWrapper from '../SvgWrapper';
 
 const SortIconButton = ({ keySort }: { keySort: string }) => {
   const { sortField, sortType } = useSortContext();
 
   return (
-    <span className="flex justify-center items-center ">
+    <span className="flex items-center justify-center ">
       {sortField === keySort && sortType === 'asc' ? (
-        <ChevronUpIcon className=" h-4 w-4 text-green-600" />
+        <SvgWrapper size="sm">
+          <ChevronUpIcon className=" text-green-600" />
+        </SvgWrapper>
       ) : sortField === keySort && sortType === 'dsc' ? (
-        <ChevronDownIcon className="h-4 w-4 text-green-600" />
+        <SvgWrapper size="sm">
+          <ChevronDownIcon className=" text-green-600" />
+        </SvgWrapper>
       ) : (
-        <ChevronUpDownIcon
-          className={`h-4 w-4 ${sortField === keySort ? 'text-green-600' : ''}`}
-        />
+        <SvgWrapper size="sm">
+          <ChevronUpDownIcon
+            className={sortField === keySort ? 'text-green-600' : ''}
+          />
+        </SvgWrapper>
       )}
     </span>
   );

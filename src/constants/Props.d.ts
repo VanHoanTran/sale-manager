@@ -57,6 +57,7 @@ export interface Transaction {
 export interface PaginationProps {
   siblingPage?: number;
   boundaryPage?: number;
+  selections?: number[];
 }
 
 interface TableContextProps {
@@ -69,3 +70,22 @@ interface TableContextProps {
   setCurrentPage?: (value: React.SetStateAction<number>) => void;
   setRowsPerPage?: (value: React.SetStateAction<number>) => void;
 }
+
+type Photo = {
+  name: string;
+  url: string;
+};
+export type FormValues = {
+  productName: string;
+  code: string;
+  desc: string;
+  sku: string;
+  price: number;
+  wholesaleDiscount: number;
+  taxRate: number;
+  category: string;
+  tags?: string[] | string;
+  brand: string;
+  vendor: string;
+  images: Photo[];
+};

@@ -13,6 +13,7 @@ const ButtonGroup = ({ buttonValues }: ButtonGroupProps) => {
     <>
       {buttonValues.map(value => (
         <ButtonWrapper
+          key={value}
           active={currentPage === value}
           onClick={() => setCurrentPage?.(value)}
         >

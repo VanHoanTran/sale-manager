@@ -1,15 +1,19 @@
 import { PaginationProps } from '../../../constants/Props';
-import Menu from './Menu';
+import DropDown from './DropDown';
 import PaginationButtons from './PaginationButtons';
 
-const Pagination = ({ siblingPage, boundaryPage }: PaginationProps) => {
+const Pagination = ({
+  siblingPage,
+  boundaryPage,
+  selections,
+}: PaginationProps) => {
   return (
-    <div className="px-2 py-3 flex justify-between">
+    <div className="flex justify-between px-2 py-3">
       <PaginationButtons
         siblingPage={siblingPage}
         boundaryPage={boundaryPage}
       />
-      <Menu />
+      <DropDown selections={selections} />
     </div>
   );
 };

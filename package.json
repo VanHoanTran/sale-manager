@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "tailwind": "npx tailwindcss -i ./src/index.css -o ./dist/index.css --watch",
     "cypress:open": "cypress open",
     "dev": "vite",
     "build": "vite build",

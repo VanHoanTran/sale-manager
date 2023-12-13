@@ -1,5 +1,7 @@
+import NewProduct from '../components/NewProduct';
+
 const CreateProductPage = () => {
-  return <div>Create new Product Page</div>;
+  return <NewProduct />;
 };
 
 export default CreateProductPage;

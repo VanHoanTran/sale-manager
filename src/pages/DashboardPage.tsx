@@ -1,5 +1,7 @@
+import Dashboard from '../components/Dashboard';
+
 const DashboardPage = () => {
-  return <div className="bg-skin-fill text-skin-base">Dashboard Page</div>;
+  return <Dashboard />;
 };
 
 export default DashboardPage;

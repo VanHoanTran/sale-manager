@@ -16,7 +16,7 @@ const NavBar = () => {
     setIsOpenMenu(open => !open);
   }
   return (
-    <nav className="sticky top-0 bg-slate-50 h-16 flex-shrink-0 pl-1 md:pl-3 w-full font-semibold  border-b border-slate-300 flex justify-between items-center">
+    <nav className="sticky top-0 z-10 bg-slate-50 h-16 flex-shrink-0 pl-1 md:pl-3 w-full font-semibold  border-b border-slate-300 flex justify-between items-center">
       <IconButton
         onClick={menuHandler}
         icon={isOpenMenu ? <Bars3BottomLeftIcon /> : <Bars3Icon />}

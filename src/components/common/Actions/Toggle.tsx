@@ -11,8 +11,8 @@ const Toggle = ({ id }: { id: string }) => {
     const rect = target.closest('button')?.getBoundingClientRect();
     if (setPosition && rect)
       setPosition({
-        x: window.innerWidth - rect.width - rect.x + 18,
-        y: rect.y + rect.height,
+        x: (window.innerWidth - rect.width - rect.x + 18).toString(),
+        y: (rect.y + rect.height).toString(),
       });
     openId === '' || openId !== id ? open?.(id) : close?.();
   };

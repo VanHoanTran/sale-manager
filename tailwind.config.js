@@ -2,8 +2,7 @@
 //import forms from '@tailwindcss/forms';
 
 export default {
-  purge: ['./src/**/*.{js,ts,jsx,tsx}'],
-  content: ['./src/**/*.{html,js,tsx}'],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       textColor: {

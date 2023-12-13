@@ -56,7 +56,7 @@ const Table = ({ children, data, titles }: TableProps) => {
   return (
     <TableContext.Provider value={value}>
       <div className="w-full overflow-auto">
-        <table className="table-auto min-w-full shadow-md  border-slate-200 overflow-hidden  ">
+        <table className="min-w-full table-auto overflow-hidden  border-slate-200 shadow-md  ">
           {children}
         </table>
       </div>
@@ -88,7 +88,7 @@ const Body = ({ render }: TableBodyProps) => {
       <tbody>
         <tr>
           <td
-            className=" text-center text-xl font-semibold p-10"
+            className=" p-10 text-center text-xl font-semibold"
             colSpan={numOfColumns}
           >
             No data to show at this moment

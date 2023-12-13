@@ -1,7 +1,7 @@
 import { Props } from '../../../constants/Props';
 const TableBodyRow = ({ children }: Props) => {
   return (
-    <tr className="border-b text-sm [&>td]:h-20  border-slate-200 hover:bg-slate-100 ">
+    <tr className="border-b border-slate-200 text-sm  hover:bg-slate-100 [&>td]:h-20 ">
       {children}
     </tr>
   );

@@ -5,11 +5,12 @@ import SortIconButton from '../Buttons/SortIconButton';
 const TableHeaderCell = ({ title, keySort }: TableHeaderProps) => {
   const { sortField, sortType, setSortValue } = useSortContext();
   const isActive =
+    keySort !== '' &&
     sortField.toLocaleLowerCase() === keySort.toLocaleLowerCase();
 
   const handleSort = () => {
-    // bypassing typeScript checking error, function will always exist
     if (setSortValue === undefined) return;
+    if (keySort === '') return;
     // in case, change sort column set to asc
     if (sortField != keySort) return setSortValue(`${keySort}-asc`);
     // in case, same column asc -> dsc
@@ -21,7 +22,7 @@ const TableHeaderCell = ({ title, keySort }: TableHeaderProps) => {
   };
   return (
     <th onClick={handleSort} className="cursor-pointer">
-      <div className="px-2 py-3 flex uppercase text-sm ">
+      <div className="flex px-2 py-3 text-sm uppercase ">
         <span className={isActive ? 'text-green-600' : ''}>{title}</span>
         {keySort === '' ? null : <SortIconButton keySort={keySort} />}
       </div>

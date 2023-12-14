@@ -1,6 +1,6 @@
 # Sale Manager
 
-This is a sale management system helping admin keeping track of sales and inventory
+This is a sale management system helping admin keeping track of sales and inventories
 
 ## Technologies used
 

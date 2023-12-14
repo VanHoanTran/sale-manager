@@ -1,9 +1,23 @@
 /** @type {import('tailwindcss').Config} */
-export default {
-  content: [],
-  theme: {
-    extend: {},
-  },
-  plugins: [],
-}
+//import forms from '@tailwindcss/forms';
 
+export default {
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  theme: {
+    extend: {
+      textColor: {
+        skin: {
+          base: 'var(--color-text-base)',
+        },
+      },
+      backgroundColor: {
+        skin: {
+          fill: 'var(--color-fill)',
+        },
+      },
+      gridTemplateColumns: {
+        product: '4fr 2fr 2fr 2fr 2fr 3.2rem',
+      },
+    },
+  },
+};

@@ -1,5 +1,5 @@
 import { Product } from '../../constants/Props';
-import { SortProvider } from '../../contexts/SortContext';
+import SortProvider from '../../contexts/SortProvider';
 import { products } from '../../data/products';
 import ProductName from '../ProductList/ProductName';
 import ProductQuantity from '../ProductList/ProductQuantity';

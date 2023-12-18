@@ -21,7 +21,6 @@ const NavBar = () => {
       <IconButton
         onClick={menuHandler}
         icon={isOpenSideNav ? <Bars3BottomLeftIcon /> : <Bars3Icon />}
-
       />
 
       <div className="flex items-center pr-4 md:pr-6">
@@ -31,7 +30,9 @@ const NavBar = () => {
           onClick={menuHandler}
           icon={isOpenSideNav ? <MoonIcon /> : <SunIcon />}
         />
-        <AccountButton />
+        <div className="p-2">
+          <AccountButton />
+        </div>
       </div>
     </nav>
   );

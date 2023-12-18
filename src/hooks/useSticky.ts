@@ -17,7 +17,7 @@ const options = {
   threshold: 1.0,
 };
 
-const useSticky = () => {
+export const useSticky = () => {
   const [sticky, setSticky] = useState<boolean>(false);
   const [observerRef, setObserverRef] = useState<HTMLDivElement | null>(null);
   const [observedRef, setObservedRef] = useState<HTMLDivElement | null>(null);
@@ -38,5 +38,3 @@ const useSticky = () => {
 
   return { sticky, setObservedRef, setObserverRef };
 };
-
-export default useSticky;

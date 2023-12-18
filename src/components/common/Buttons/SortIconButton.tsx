@@ -3,8 +3,8 @@ import {
   ChevronUpDownIcon,
   ChevronUpIcon,
 } from '@heroicons/react/20/solid';
-import { useSortContext } from '../../../contexts/SortContext';
 import SvgWrapper from '../SvgWrapper';
+import { useSortContext } from '../../../hooks/useSortContext';
 
 const SortIconButton = ({ keySort }: { keySort: string }) => {
   const { sortField, sortType } = useSortContext();

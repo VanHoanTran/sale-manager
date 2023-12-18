@@ -1,4 +1,3 @@
-import { SortProvider } from '../../contexts/SortContext';
 import { products } from '../../data/products';
 import { Table } from '../common/Table';
 import TableRow from '../common/Table/TableBodyRow';
@@ -17,6 +16,7 @@ import { PencilIcon, TrashIcon } from '@heroicons/react/24/outline';
 import ActionList from '../common/Actions/ActionList';
 import ActionItem from '../common/Actions/ActionItem';
 import Toggle from '../common/Actions/Toggle';
+import SortProvider from '../../contexts/SortProvider';
 const titles = [
   { title: 'name', keySort: 'name' },
   { title: 'category', keySort: 'category' },

@@ -1,5 +1,5 @@
 import { useFormContext } from 'react-hook-form';
-import useSticky from '../../../hooks/useSticky';
+import { useSticky } from '../../../hooks/useSticky';
 import Button from '../Buttons/Button';
 
 const ActionButtons = () => {

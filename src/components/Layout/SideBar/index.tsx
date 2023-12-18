@@ -9,15 +9,22 @@ const SideBar = () => {
   const closeSideNav = () => setIsOpenSideNav(false);
   return (
     <div
-      className={`absolute z-30 ${
+      className={`z-30 origin-left ${
         isOpenSideNav
-          ? 'animate-slide-to-right block origin-left transition-all'
-          : 'animate-slide-to-left origin-left'
-      } h-full border-r border-slate-300 bg-slate-50 text-slate-800 `}
+          ? 'animate-slide-to-right absolute transition-all lg:sticky'
+          : 'animate-slide-to-left absolute'
+      } h-full border-r border-slate-300 bg-slate-50 text-slate-800`}
     >
-      <div className="flex w-full items-center justify-end">
+      <div className="flex w-full items-center justify-between">
         <Logo />
-        <IconButton icon={<XMarkIcon />} onClick={closeSideNav}></IconButton>
+        {
+          <div className="lg:hidden">
+            <IconButton
+              icon={<XMarkIcon />}
+              onClick={closeSideNav}
+            ></IconButton>
+          </div>
+        }
       </div>
       <NavBarLinks />
     </div>

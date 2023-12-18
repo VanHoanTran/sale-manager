@@ -6,17 +6,20 @@ export default {
   theme: {
     extend: {
       animation: {
-        'slide-to-right': 'slide-to-right  .2s ease-in forwards',
-        'slide-to-left': 'slide-to-left  .2s ease-in forwards',
+        'slide-to-right':
+          'slide-to-right  .1s cubic-bezier(0.43,-0.04, 0.2, 1) forwards',
+        'slide-to-left':
+          'slide-to-left  .1s cubic-bezier(0.43,-0.04, 0.2, 1) forwards',
       },
       keyframes: {
         'slide-to-right': {
           '0%': {
-            transform: 'scaleX(0) ',
+            transform: 'w-0',
           },
 
           '100%': {
-            transform: 'scaleX(1)',
+            transform: 'w-full',
+
           },
         },
         'slide-to-left': {

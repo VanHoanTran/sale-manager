@@ -7,11 +7,12 @@ import LayoutProvider from '../../contexts/LayoutProvider';
 const Layout = () => {
   return (
     <LayoutProvider>
-      <div className="relative flex h-screen flex-row text-slate-500">
+      <div className="relative flex h-screen flex-auto flex-row text-slate-500 ">
         <SideBar />
-        <main className="relative flex h-full flex-grow flex-col justify-between overflow-auto ">
+        <main className="relative flex h-full w-full flex-auto flex-col justify-between overflow-auto ">
           <NavBar />
-          <div className="flex-grow p-4 transition-transform md:p-6">
+          <div className="flex-grow p-4 md:p-6">
+
             <Outlet />
           </div>
           <Footer />

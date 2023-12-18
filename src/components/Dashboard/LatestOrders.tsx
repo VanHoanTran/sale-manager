@@ -1,5 +1,5 @@
 import { Transaction } from '../../constants/Props';
-import { SortProvider } from '../../contexts/SortContext';
+import SortProvider from '../../contexts/SortProvider';
 import { transactions } from '../../data/transactions';
 import OrderCustomer from '../OrderList/OrderCustomer';
 import OrderDate from '../OrderList/OrderDate';

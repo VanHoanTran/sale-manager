@@ -1,4 +1,3 @@
-import { SortProvider } from '../../contexts/SortContext';
 import { Table } from '../common/Table';
 import TableBodyRow from '../common/Table/TableBodyRow';
 import Title from '../common/Title';
@@ -18,6 +17,7 @@ import ActionList from '../common/Actions/ActionList';
 import ActionItem from '../common/Actions/ActionItem';
 import { PencilIcon, TrashIcon } from '@heroicons/react/24/outline';
 import ActionsProvider from '../../contexts/ActionsProvider';
+import SortProvider from '../../contexts/SortProvider';
 const titles = [
   { title: 'order', keySort: 'order' },
   { title: 'date', keySort: 'date' },

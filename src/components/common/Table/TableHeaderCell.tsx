@@ -1,5 +1,6 @@
 import { TableHeaderProps } from '../../../constants/Props';
-import { useSortContext } from '../../../contexts/SortContext';
+import { useSortContext } from '../../../hooks/useSortContext';
+
 import SortIconButton from '../Buttons/SortIconButton';
 
 const TableHeaderCell = ({ title, keySort }: TableHeaderProps) => {

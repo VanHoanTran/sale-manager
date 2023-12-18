@@ -1,4 +1,5 @@
 import { NavLink } from 'react-router-dom';
+import { useLayoutContext } from '../../../hooks/useLayoutContext';
 
 const sections = [
   {
@@ -24,16 +25,18 @@ const sections = [
 ];
 
 const NavBarLinks = () => {
+  const { setIsOpenSideNav } = useLayoutContext();
   return (
-    <nav className="min-w-[258px] pt-4 px-2">
+    <nav className="min-w-[258px] px-2 pt-4">
       <ul>
         {sections.map(section => (
           <li key={section.title}>
             <NavLink
+              onClick={() => setIsOpenSideNav(false)}
               className={({ isActive }) =>
                 [
                   isActive ? ' focus:bg-slate-300' : '',
-                  'block px-4 py-2 rounded-lg mt-1 font-semibold text-slate-500 hover:bg-slate-300',
+                  'mt-1 block rounded-lg px-4 py-2 font-semibold text-slate-500 hover:bg-slate-300',
                 ].join(' ')
               }
               key={section.page}

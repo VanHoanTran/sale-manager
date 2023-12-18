@@ -1,8 +1,8 @@
 import {
   Bars3BottomLeftIcon,
   Bars3Icon,
-  BellIcon,
-  Cog8ToothIcon,
+  // BellIcon,
+  // Cog8ToothIcon,
   MoonIcon,
   SunIcon,
 } from '@heroicons/react/24/outline';

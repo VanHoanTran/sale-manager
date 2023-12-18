@@ -12,6 +12,7 @@ const Layout = () => {
         <main className="relative flex h-full w-full flex-auto flex-col justify-between overflow-auto ">
           <NavBar />
           <div className="flex-grow p-4 md:p-6">
+
             <Outlet />
           </div>
           <Footer />

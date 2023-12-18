@@ -7,7 +7,6 @@ import NavBarLinks from './NavBarLinks';
 const SideBar = () => {
   const { isOpenSideNav, setIsOpenSideNav } = useLayoutContext();
   const closeSideNav = () => setIsOpenSideNav(false);
-
   return (
     <div
       className={`z-30 origin-left ${

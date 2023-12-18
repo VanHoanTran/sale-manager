@@ -19,6 +19,7 @@ export default {
 
           '100%': {
             transform: 'w-full',
+
           },
         },
         'slide-to-left': {

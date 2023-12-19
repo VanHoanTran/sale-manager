@@ -17,6 +17,8 @@ import ActionList from '../common/Actions/ActionList';
 import ActionItem from '../common/Actions/ActionItem';
 import Toggle from '../common/Actions/Toggle';
 import SortProvider from '../../contexts/SortProvider';
+import { useNavigate } from 'react-router-dom';
+import paths from '../../paths';
 const titles = [
   { title: 'name', keySort: 'name' },
   { title: 'category', keySort: 'category' },
@@ -27,12 +29,17 @@ const titles = [
 ];
 
 const ProductList = () => {
+  const navigate = useNavigate();
   const handleDelete = () => {
     console.log('delete');
   };
   const handleEdit = () => {
     console.log('edit');
   };
+  const handleOnClick = (id?: string) => {
+    if (id) navigate(paths.editProduct({ id }));
+  };
+
   return (
     <Container>
       <SortProvider>
@@ -42,7 +49,10 @@ const ProductList = () => {
             <Table.Header />
             <Table.Body
               render={(product: Product) => (
-                <TableRow key={product.id}>
+                <TableRow
+                  onClick={() => handleOnClick(product.id)}
+                  key={product.id}
+                >
                   <ProductName product={product} />
                   <ProductCategory product={product} />
                   <ProductQuantity product={product} />

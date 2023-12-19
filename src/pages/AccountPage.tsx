@@ -1,5 +1,7 @@
+import Settings from '../components/Settings';
+
 const AccountPage = () => {
-  return <div>Account Page</div>;
+  return <Settings />;
 };
 
 export default AccountPage;

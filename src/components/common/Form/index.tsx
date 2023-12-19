@@ -1,13 +1,16 @@
 import { ReactElement } from 'react';
-import { FormProvider, SubmitHandler, useForm } from 'react-hook-form';
+import {
+  FieldValues,
+  FormProvider,
+  SubmitHandler,
+  useForm,
+} from 'react-hook-form';
 import ChildrenElement from './ChildrenElement';
-import ActionButtons from './ActionButtons';
-import { FormValues } from '../../../constants/Props';
 
 type Props = {
-  defaultValues?: FormValues;
+  defaultValues: FieldValues;
   children: ReactElement | ReactElement[];
-  onSubmit: SubmitHandler<FormValues>;
+  onSubmit: SubmitHandler<FieldValues>;
 };
 
 //https://react-hook-form.com/docs/formprovider
@@ -22,7 +25,6 @@ const Form = ({ children, onSubmit, defaultValues }: Props) => {
         onSubmit={submitHandler}
       >
         <ChildrenElement children={children} />
-        <ActionButtons />
       </form>
     </FormProvider>
   );

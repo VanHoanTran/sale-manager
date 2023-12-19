@@ -1,5 +1,7 @@
+import ProductDetails from '../components/ProductDetails';
+
 const EditProductPage = () => {
-  return <div>Edit Product Page</div>;
+  return <ProductDetails />;
 };
 
 export default EditProductPage;

@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { FieldValues } from 'react-hook-form';
 
 export interface Props {
   children: ReactNode;
@@ -28,11 +29,18 @@ export interface SortContextProps {
 
 export interface Product {
   id: string;
-  name: string;
+  productName: string;
   category: string;
   quantity: number;
   status: string;
   price: number;
+  desc: string;
+  sku: string;
+  wholesaleDiscount: number;
+  taxRate: number;
+  brand: string;
+  vendor: string;
+  images: string[];
 }
 
 export interface TableBodyProps {
@@ -75,7 +83,7 @@ type Photo = {
   name: string;
   url: string;
 };
-export type FormValues = {
+export interface FormValues extends FieldValues {
   productName: string;
   code: string;
   desc: string;
@@ -88,4 +96,4 @@ export type FormValues = {
   brand: string;
   vendor: string;
   images: Photo[];
-};
+}

@@ -2,7 +2,7 @@ import { useFormContext } from 'react-hook-form';
 import { useSticky } from '../../../hooks/useSticky';
 import Button from '../Buttons/Button';
 
-const ActionButtons = () => {
+const ProductButtons = () => {
   const { reset } = useFormContext();
   const { setObserverRef, setObservedRef, sticky } = useSticky();
   return (
@@ -23,10 +23,10 @@ const ActionButtons = () => {
 
         <div className=" flex items-center justify-between gap-4">
           <Button variant="secondary" type="button" onClick={() => reset()}>
-            Reset
+            Clear
           </Button>
           <Button type="submit" variant="primary">
-            Submit
+            Create
           </Button>
         </div>
       </div>
@@ -39,4 +39,4 @@ const ActionButtons = () => {
   );
 };
 
-export default ActionButtons;
+export default ProductButtons;

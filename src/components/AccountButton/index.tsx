@@ -1,14 +1,14 @@
 import { NavLink } from 'react-router-dom';
-import { User } from '../../constants/User';
+import { FieldValues } from 'react-hook-form';
 
-const user: User = {
-  name: 'Carolyn Perkins',
+const user: FieldValues = {
+  username: 'Carolyn Perkins',
   imgUrl: 'https://picsum.photos/24?random=2',
   role: 'Admin',
 };
 
 const AccountButton = () => {
-  const { name, imgUrl, role } = user;
+  const { username, imgUrl, role } = user;
   return (
     <NavLink to={'account/:id'} className="flex items-center ">
       <img
@@ -20,8 +20,8 @@ const AccountButton = () => {
       />
 
       <div className="ml-2 hidden md:block">
-        <p className="font-light text-sm text-slate-600 ">{role}</p>
-        <p>{name}</p>
+        <p className="text-sm font-light text-slate-600 ">{role}</p>
+        <p>{username}</p>
       </div>
     </NavLink>
   );

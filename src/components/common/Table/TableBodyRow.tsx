@@ -1,7 +1,16 @@
 import { Props } from '../../../constants/Props';
-const TableBodyRow = ({ children }: Props) => {
+
+interface Clickable {
+  onClick: () => void;
+}
+
+type TableRowProps = Props & Clickable;
+const TableBodyRow = ({ children, onClick }: TableRowProps) => {
   return (
-    <tr className="border-b border-slate-200 text-sm  hover:bg-slate-100 [&>td]:h-20 ">
+    <tr
+      onClick={onClick}
+      className="border-b border-slate-200 text-sm  hover:bg-slate-100 [&>td]:h-20 "
+    >
       {children}
     </tr>
   );

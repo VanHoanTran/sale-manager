@@ -17,7 +17,6 @@ const NavBar = () => {
   const menuHandler = () => {
     setIsOpenSideNav(open => !open);
   };
-  console.log(isOpenSideNav);
   return (
     <nav className="sticky top-0 z-10 flex h-16 w-full flex-shrink-0 items-center justify-between border-b  border-slate-300 bg-slate-50 pl-1 font-semibold md:pl-3">
       <IconButton

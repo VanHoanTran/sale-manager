@@ -7,7 +7,7 @@ const ProductName = ({ product }: { product: Product }) => {
         <span className="flex-shrink-0">
           <img
             className=" mr-2 h-10 w-10 rounded-lg border border-slate-200"
-            src={`/product-images/${product.id}.jpeg`}
+            src={product.images.at(0)}
             alt=""
           />
         </span>

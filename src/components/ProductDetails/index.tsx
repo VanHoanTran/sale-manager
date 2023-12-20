@@ -51,7 +51,6 @@ const categoryOptions = [
 const ProductDetails = () => {
   const { id } = useParams();
   const product = products.find(product => product.id === id);
-  console.log(product);
   const values = product || defaultValues;
   const onSubmit = (data: FieldValues) => {
     console.log({ data });
@@ -155,7 +154,7 @@ const ProductDetails = () => {
             </div>
           </div>
         </div>
-        <ProductButtons />
+        <ProductButtons isUpdate={!!id} />
       </Form>
     </ListContainer>
   );

@@ -14,7 +14,7 @@ export const products: Product[] = [
     taxRate: 13,
     brand: 'Adventure Gear Co.',
     vendor: 'Outdoor Supply Ltd.',
-    images: ['2e73a587-5f9d-40e3-a8b0-0d98f741d7a1.jpeg'],
+    images: ['/product-images/2e73a587-5f9d-40e3-a8b0-0d98f741d7a1.jpeg'],
   },
   {
     id: 'c63a1b68-92e9-49d0-bc9a-33db0524c2de',
@@ -29,7 +29,7 @@ export const products: Product[] = [
     taxRate: 13,
     brand: 'Urban Explorer',
     vendor: 'City Style Retail',
-    images: ['c63a1b68-92e9-49d0-bc9a-33db0524c2de.jpeg'],
+    images: ['/product-images/c63a1b68-92e9-49d0-bc9a-33db0524c2de.jpeg'],
   },
   {
     id: '31e04674-79b9-4a62-b8dd-29e92f6940ac',
@@ -44,7 +44,7 @@ export const products: Product[] = [
     taxRate: 13,
     brand: 'Casual Comfort',
     vendor: 'Fashion Trends Inc.',
-    images: ['31e04674-79b9-4a62-b8dd-29e92f6940ac.jpeg'],
+    images: ['/product-images/31e04674-79b9-4a62-b8dd-29e92f6940ac.jpeg'],
   },
   {
     id: '1cfc6d26-3c92-4d73-90ed-e7a5c19ff0e6',
@@ -59,7 +59,7 @@ export const products: Product[] = [
     taxRate: 13,
     brand: 'Acoustic Harmony',
     vendor: 'Electro Sound Solutions',
-    images: ['1cfc6d26-3c92-4d73-90ed-e7a5c19ff0e6.jpeg'],
+    images: ['/product-images/1cfc6d26-3c92-4d73-90ed-e7a5c19ff0e6.jpeg'],
   },
   {
     id: '754f7b58-3ebc-4379-a8cd-01d3ca7f4394',
@@ -74,7 +74,7 @@ export const products: Product[] = [
     taxRate: 13,
     brand: 'Beats by Dre',
     vendor: 'Audio Emporium',
-    images: ['754f7b58-3ebc-4379-a8cd-01d3ca7f4394.jpeg'],
+    images: ['/product-images/754f7b58-3ebc-4379-a8cd-01d3ca7f4394.jpeg'],
   },
   {
     id: '9b5e9825-190b-46e2-9b9c-63271f287dfa',
@@ -89,7 +89,7 @@ export const products: Product[] = [
     taxRate: 13,
     brand: 'Apple',
     vendor: 'Apple Store',
-    images: ['9b5e9825-190b-46e2-9b9c-63271f287dfa.jpeg'],
+    images: ['/product-images/9b5e9825-190b-46e2-9b9c-63271f287dfa.jpeg'],
   },
   {
     id: 'a079622f-3b0a-49e3-93e0-cc1f94a3d4e9',
@@ -104,7 +104,7 @@ export const products: Product[] = [
     taxRate: 13,
     brand: 'Apple',
     vendor: 'Apple Store',
-    images: ['a079622f-3b0a-49e3-93e0-cc1f94a3d4e9.jpeg'],
+    images: ['/product-images/a079622f-3b0a-49e3-93e0-cc1f94a3d4e9.jpeg'],
   },
   {
     id: 'c4ce63f5-ef27-443d-b53b-b3c32b7121ca',
@@ -119,7 +119,7 @@ export const products: Product[] = [
     taxRate: 13,
     brand: 'StrideRite',
     vendor: 'Shoe Haven',
-    images: ['c4ce63f5-ef27-443d-b53b-b3c32b7121ca.jpeg'],
+    images: ['/product-images/c4ce63f5-ef27-443d-b53b-b3c32b7121ca.jpeg'],
   },
   {
     id: 'c55fdd32-7b85-46b2-a3c1-8fb0c4a99e27',
@@ -134,7 +134,7 @@ export const products: Product[] = [
     taxRate: 13,
     brand: 'FreshKicks',
     vendor: 'Footwear Express',
-    images: ['c55fdd32-7b85-46b2-a3c1-8fb0c4a99e27.jpeg'],
+    images: ['/product-images/c55fdd32-7b85-46b2-a3c1-8fb0c4a99e27.jpeg'],
   },
   {
     id: '1252d37c-3fc9-4520-8d35-2e46c5f548f7',
@@ -149,7 +149,7 @@ export const products: Product[] = [
     taxRate: 13,
     brand: 'Timeless Elegance',
     vendor: 'Watch Emporium',
-    images: ['1252d37c-3fc9-4520-8d35-2e46c5f548f7.jpeg'],
+    images: ['/product-images/1252d37c-3fc9-4520-8d35-2e46c5f548f7.jpeg'],
   },
   {
     id: '7e209a90-e758-4f31-8a62-5b6c3fc9f392',
@@ -164,7 +164,7 @@ export const products: Product[] = [
     taxRate: 13,
     brand: 'Artisan Watches',
     vendor: 'Luxury Timepieces Inc.',
-    images: ['7e209a90-e758-4f31-8a62-5b6c3fc9f392.jpeg'],
+    images: ['/product-images/7e209a90-e758-4f31-8a62-5b6c3fc9f392.jpeg'],
   },
   {
     id: 'f169a03b-d2d6-45e5-8a7c-3182f0b9c067',
@@ -179,6 +179,6 @@ export const products: Product[] = [
     taxRate: 13,
     brand: 'Heritage Timepieces',
     vendor: 'Timeless Treasures',
-    images: ['f169a03b-d2d6-45e5-8a7c-3182f0b9c067.jpeg'],
+    images: ['/product-images/f169a03b-d2d6-45e5-8a7c-3182f0b9c067.jpeg'],
   },
 ];

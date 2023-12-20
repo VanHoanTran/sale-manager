@@ -2,7 +2,11 @@ import { useFormContext } from 'react-hook-form';
 import { useSticky } from '../../../hooks/useSticky';
 import Button from '../Buttons/Button';
 
-const ProductButtons = () => {
+interface ProductButtonsProps {
+  isUpdate: boolean;
+}
+
+const ProductButtons = ({ isUpdate }: ProductButtonsProps) => {
   const { reset } = useFormContext();
   const { setObserverRef, setObservedRef, sticky } = useSticky();
   return (
@@ -26,7 +30,7 @@ const ProductButtons = () => {
             Clear
           </Button>
           <Button type="submit" variant="primary">
-            Create
+            {isUpdate ? 'Update' : 'Create'}
           </Button>
         </div>
       </div>

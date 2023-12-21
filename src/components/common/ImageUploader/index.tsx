@@ -23,6 +23,7 @@ const ImageUploader = ({ name, title, subtitle }: Props) => {
     : [];
 
   const [images, setImages] = useState<Photo[]>(initialImages);
+
   useEffect(() => {
     setValue(name, images);
   }, [images, name, setValue]);

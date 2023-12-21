@@ -43,6 +43,35 @@ export interface Product {
   images: string[];
 }
 
+export interface ProductPurchase {
+  id: string;
+  quantity: number;
+  price: number;
+}
+export interface Address {
+  unit?: string;
+  street: string;
+  city: string;
+  province: string;
+  country: string;
+  postalCode: string;
+}
+
+export interface Customer {
+  id: string;
+  email: string;
+  phone: string;
+  photo: string;
+  name: string;
+  billingAddress: Address;
+  shippingAddress: Address;
+}
+export interface Order {
+  id: string;
+  item: ProductPurchase[];
+  customer: Customer;
+}
+
 export interface TableBodyProps {
   render: (item) => ReactNode;
 }

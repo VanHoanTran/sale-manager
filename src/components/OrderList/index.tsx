@@ -18,6 +18,8 @@ import ActionItem from '../common/Actions/ActionItem';
 import { PencilIcon, TrashIcon } from '@heroicons/react/24/outline';
 import ActionsProvider from '../../contexts/ActionsProvider';
 import SortProvider from '../../contexts/SortProvider';
+import { useNavigate } from 'react-router-dom';
+import paths from '../../paths';
 const titles = [
   { title: 'order', keySort: 'order' },
   { title: 'date', keySort: 'date' },
@@ -29,6 +31,11 @@ const titles = [
 ];
 
 const OrderList = () => {
+  const navigate = useNavigate();
+
+  const handleOnClick = (id: string) => {
+    navigate(paths.orderDetails({ id }));
+  };
   const handleDelete = () => {
     console.log('Delete');
   };
@@ -36,6 +43,7 @@ const OrderList = () => {
   const handleEdit = () => {
     console.log('Edit');
   };
+
   return (
     <Container>
       <SortProvider>
@@ -45,7 +53,9 @@ const OrderList = () => {
             <Table.Header />
             <Table.Body
               render={(trans: Transaction) => (
-                <TableBodyRow>
+                <TableBodyRow
+                  onClick={() => handleOnClick(trans.id.toString())}
+                >
                   <OrderNumber id={trans.id} />
                   <OrderDate date={trans.date} />
                   <OrderCustomer customer={trans.customer} />

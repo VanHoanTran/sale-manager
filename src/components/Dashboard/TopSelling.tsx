@@ -1,6 +1,8 @@
+import { useNavigate } from 'react-router-dom';
 import { Product } from '../../constants/Props';
 import SortProvider from '../../contexts/SortProvider';
 import { products } from '../../data/products';
+import paths from '../../paths';
 import ProductName from '../ProductList/ProductName';
 import ProductQuantity from '../ProductList/ProductQuantity';
 import { Table } from '../common/Table';
@@ -13,16 +15,28 @@ const titles = [
 ];
 
 const TopSelling = () => {
+  const navigate = useNavigate();
+
+  const handleOnClick = (id: string) => {
+    navigate(paths.editProduct({ id }));
+  };
   return (
     <div className="grid-item-border">
       <Title>Top Selling</Title>
       <div>
         <SortProvider>
-          <Table data={products.slice(0, 6) as []} titles={titles as []}>
+          <Table
+            key={'top selling'}
+            data={products.slice(0, 6) as []}
+            titles={titles as []}
+          >
             <Table.Header />
             <Table.Body
               render={(product: Product) => (
-                <TableBodyRow key={product.id}>
+                <TableBodyRow
+                  onClick={() => handleOnClick(product.id)}
+                  key={product.id}
+                >
                   <ProductName product={product} />
 
                   <ProductQuantity product={product} />

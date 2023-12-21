@@ -15,13 +15,15 @@ type Photo = {
 
 const ImageUploader = ({ name, title, subtitle }: Props) => {
   const { setValue, getValues } = useFormContext();
-  const initialImages: Photo[] = getValues(name).map((img: string) => ({
-    name: img,
-    url: img,
-  }));
-  console.log(initialImages);
+  const initialImages: Photo[] = getValues(name)
+    ? getValues(name).map((img: string) => ({
+        name: img,
+        url: img,
+      }))
+    : [];
+
   const [images, setImages] = useState<Photo[]>(initialImages);
-  console.log(getValues(name));
+
   useEffect(() => {
     setValue(name, images);
   }, [images, name, setValue]);

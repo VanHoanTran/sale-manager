@@ -1,6 +1,6 @@
 import { products } from '../../data/products';
 import { Table } from '../common/Table';
-import TableRow from '../common/Table/TableBodyRow';
+import TableBodyRow from '../common/Table/TableBodyRow';
 import ProductCategory from './ProductCategory';
 import ProductName from './ProductName';
 import ProductPrice from './ProductPrice';
@@ -49,7 +49,7 @@ const ProductList = () => {
             <Table.Header />
             <Table.Body
               render={(product: Product) => (
-                <TableRow
+                <TableBodyRow
                   onClick={() => handleOnClick(product.id)}
                   key={product.id}
                 >
@@ -69,7 +69,7 @@ const ProductList = () => {
                       </ActionItem>
                     </ActionList>
                   </ActionGroup>
-                </TableRow>
+                </TableBodyRow>
               )}
             />
             <Table.Footer>

@@ -22,7 +22,7 @@ const Card = ({ title, subtitle, divided, stacked, children }: CardProps) => {
       >
         {children}
       </div>
-      {divided && <hr className=" my-10" />}
+      {divided && <hr className="my-10" />}
     </div>
   );
 };

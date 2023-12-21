@@ -22,7 +22,10 @@ const TableHeaderCell = ({ title, keySort }: TableHeaderProps) => {
     setSortValue(`${keySort}-asc`);
   };
   return (
-    <th onClick={handleSort} className="cursor-pointer">
+    <th
+      onClick={handleSort}
+      className={`${keySort === '' ? 'cursor-default' : 'cursor-pointer'}`}
+    >
       <div className="flex px-2 py-3 text-sm uppercase ">
         <span className={isActive ? 'text-green-600' : ''}>{title}</span>
         {keySort === '' ? null : <SortIconButton keySort={keySort} />}

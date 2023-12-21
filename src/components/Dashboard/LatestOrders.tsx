@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { Transaction } from '../../constants/Props';
 import SortProvider from '../../contexts/SortProvider';
 import { transactions } from '../../data/transactions';
@@ -10,6 +11,7 @@ import OrderTotal from '../OrderList/OrderTotal';
 import { Table } from '../common/Table';
 import TableBodyRow from '../common/Table/TableBodyRow';
 import Title from '../common/Title';
+import paths from '../../paths';
 
 const titles = [
   { title: 'order', keySort: '' },
@@ -21,16 +23,27 @@ const titles = [
 ];
 
 const LatestOrders = () => {
+  const navigate = useNavigate();
+
+  const handleOnClick = (id: string) => {
+    navigate(paths.orderDetails({ id }));
+  };
   return (
     <div className="grid-item-border xl:col-span-2">
       <Title>Latest Orders</Title>
       <div>
         <SortProvider>
-          <Table data={transactions.slice(0, 6) as []} titles={titles as []}>
+          <Table
+            key={'latest orders'}
+            data={transactions.slice(0, 6) as []}
+            titles={titles as []}
+          >
             <Table.Header />
             <Table.Body
               render={(trans: Transaction) => (
-                <TableBodyRow>
+                <TableBodyRow
+                  onClick={() => handleOnClick(trans.id.toString())}
+                >
                   <OrderNumber id={trans.id} />
                   <OrderDate date={trans.date} />
                   <OrderCustomer customer={trans.customer} />

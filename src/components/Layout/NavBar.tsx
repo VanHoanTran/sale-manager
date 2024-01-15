@@ -3,17 +3,17 @@ import {
   Bars3Icon,
   // BellIcon,
   // Cog8ToothIcon,
-  MoonIcon,
-  SunIcon,
+  // MoonIcon,
+  // SunIcon,
 } from '@heroicons/react/24/outline';
 import AccountButton from '../AccountButton';
 import IconButton from '../common/Buttons/IconButton';
 import { useLayoutContext } from '../../hooks/useLayoutContext';
-import { useDarkModeContext } from '../../hooks/useDarkModeContext';
+//import { useDarkModeContext } from '../../hooks/useDarkModeContext';
 
 const NavBar = () => {
   const { setIsOpenSideNav, isOpenSideNav } = useLayoutContext();
-  const { isDarkMode, toggleDarkMode } = useDarkModeContext();
+  //const { isDarkMode, toggleDarkMode } = useDarkModeContext();
   const menuHandler = () => {
     setIsOpenSideNav(open => !open);
   };
@@ -27,10 +27,10 @@ const NavBar = () => {
       <div className="flex items-center pr-4 md:pr-6">
         {/* <IconButton onClick={menuHandler} icon={<BellIcon />} /> */}
         {/* <IconButton onClick={menuHandler} icon={<Cog8ToothIcon />} /> */}
-        <IconButton
+        {/* <IconButton
           onClick={toggleDarkMode}
           icon={!isDarkMode ? <MoonIcon /> : <SunIcon />}
-        />
+        /> */}
         <div className="p-2">
           <AccountButton />
         </div>
